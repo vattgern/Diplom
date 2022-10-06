@@ -6,10 +6,11 @@
 
 <script>
 import ExampleComponent from "../WelcomeComponent.vue";
+
 export default {
     name: "MainComponent",
     components: {
-        ExampleComponent
+        ExampleComponent,
     },
 }
 </script>
