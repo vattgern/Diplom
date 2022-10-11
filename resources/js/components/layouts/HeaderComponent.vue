@@ -28,6 +28,7 @@ export default {
 </script>
 
 <style scoped>
+
     .header__head{
         height: 125px;
         margin: 0 175px;

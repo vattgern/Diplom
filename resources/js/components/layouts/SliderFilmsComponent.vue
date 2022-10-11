@@ -4,23 +4,43 @@
         <div class="head__content">
             <div class="head__content__left">
                 <div class="head__content__title">
-                    <h1> {{ this.films[0].name }} </h1>
-                    <span class="head__content__text">
-                        <p class="years"> {{ this.films[0].yearBegin }} - {{ this.films[0].yearEnd }} </p>
-                        |
-                        <p class="rating"> {{ this.films[0].rating }} </p>
+                    <h1> {{ this.films[this.sliderIndex].name }} </h1>
+                </div>
+                <div class="head__content__text">
+                    <span class="years">
+                        {{ this.films[this.sliderIndex].yearBegin }} - {{ this.films[this.sliderIndex].yearEnd }}
                     </span>
-                    <p class="head__content__desc">
-                        {{ this.films[0].description }}
-                    </p>
+                    |
+                    <span class="rating"> {{ this.films[this.sliderIndex].rating }} </span>
+                </div>
+                <div class="head__content__desc">
+                    <p>{{ this.films[this.sliderIndex].description }}</p>
                 </div>
             </div>
-            <div class="head__content__right"></div>
+            <div class="head__content__right">
+                <div class="panel">
+                    <div class="dots">
+                        <div v-on:click="sliderPoint(0)" :class="this.sliderIndex === 0 ? 'dot__active' : 'dot'"></div>
+                        <div v-on:click="sliderPoint(1)" :class="this.sliderIndex === 1 ? 'dot__active' : 'dot'"></div>
+                        <div v-on:click="sliderPoint(2)" :class="this.sliderIndex === 2 ? 'dot__active' : 'dot'"></div>
+                        <div v-on:click="sliderPoint(3)" :class="this.sliderIndex === 3 ? 'dot__active' : 'dot'"></div>
+                        <div v-on:click="sliderPoint(4)" :class="this.sliderIndex === 4 ? 'dot__active' : 'dot'"></div>
+                    </div>
+                    <div class="controls">
+                        <div class="left" v-on:click="sliderLeft">
+                            <img :src="'../img/Left.svg'" alt="">
+                        </div>
+                        <div class="right" v-on:click="sliderRight">
+                            <img :src="'../img/Right.svg'" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <!--     Здесь будут менять постеры       -->
         <div class="head__shadow"></div>
         <div class="head__back">
-            <img :src="'../img/postersSlider/GOT.png'" alt="">
+            <img :src="this.films[this.sliderIndex].imgSrc" alt="">
         </div>
     </div>
 </template>
@@ -32,7 +52,7 @@ export default {
         return {
             films: [
                 {
-                    name: 'Игра престолов',
+                    name: 'Игра Престолов',
                     yearBegin: 2011,
                     yearEnd: 2019,
                     rating: '18+',
@@ -42,7 +62,7 @@ export default {
                     imgSrc: '../img/postersSlider/GOT.png'
                 },
                 {
-                    name: 'Дом дракона',
+                    name: 'Дом Дракона',
                     yearBegin: 2022,
                     yearEnd: null,
                     rating: '18+',
@@ -55,7 +75,7 @@ export default {
                     imgSrc: '../img/postersSlider/HOD.png'
                 },
                 {
-                    name: 'Ходячие мертвецы',
+                    name: 'Ходячие Мертвецы',
                     yearBegin: 2010,
                     yearEnd: 2022,
                     rating: '18+',
@@ -65,10 +85,10 @@ export default {
                         'по несчастью чувствовать глубины человеческой жестокости. \n' +
                         'Рик пытается спасти близких и понимает, что всепоглощающий страх людей может быть \n' +
                         'опаснее ходячих мертвецов.',
-                    imgSrc: '../img/postersSlider/GOT.jpg'
+                    imgSrc: '../img/postersSlider/TWD.jpg'
                 },
                 {
-                    name: 'Последняя дуэль',
+                    name: 'Последняя Дуэль',
                     yearBegin: 2021,
                     yearEnd: null,
                     rating: '18+',
@@ -78,7 +98,7 @@ export default {
                     imgSrc: '../img/postersSlider/TLD.jpg'
                 },
                 {
-                    name: 'Криминальное чтиво',
+                    name: 'Криминальное Чтиво',
                     yearBegin: 1994,
                     yearEnd: null,
                     rating: '18+',
@@ -91,12 +111,38 @@ export default {
                     imgSrc: '../img/postersSlider/CX.jpg'
                 }
             ],
+            sliderIndex: 0
         }
     },
     mounted() {
         console.log(this.films)
     },
     methods:{
+        sliderLeft(){
+            if(this.sliderIndex === 0){
+                this.sliderIndex = 4;
+            } else {
+                this.sliderIndex -= 1;
+            }
+        },
+        sliderRight(){
+            if(this.sliderIndex === 4){
+                this.sliderIndex = 0;
+            } else {
+                this.sliderIndex += 1;
+            }
+        },
+        sliderPoint(id){
+            this.sliderIndex = id;
+        }
+    },
+    watch: {
+        sliderIndex(){
+            // Пока странно работает
+            // setTimeout(()=>{
+            //     this.sliderIndex++;
+            // },2000);
+        }
     }
 }
 </script>
@@ -118,7 +164,7 @@ export default {
     .head__back img{
         width: 100%;
         height: 100%;
-        object-fit: fill;
+        object-fit: cover;
         object-position: center;
     }
     .head__shadow{
@@ -127,7 +173,8 @@ export default {
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(9, 26, 70, 0.25);
+        /*background: rgba(9, 26, 70, 0.4);*/
+        background: rgba(0, 0, 0, 0.4);
         z-index: 3;
     }
     .head__content{
@@ -135,16 +182,106 @@ export default {
         bottom: 7.5%;
         left: 0;
         z-index: 4;
+
         width: 100%;
         height: 50vh;
-        border: 2px red solid;
         background: transparent;
+
+        display: flex;
+        flex-direction: row;
     }
     .head__content__left{
         width: 50%;
         height: 100%;
-        border: 2px white solid;
         color: white;
-        font-family: sans-serif;
+    }
+    .head__content__left > *{
+        margin-left: 175px;
+    }
+    .head__content__title h1{
+        font-family: 'Oswald', sans-serif;
+        font-size: 64px;
+        font-weight: 700;
+        letter-spacing: 0.5rem;
+    }
+    .head__content__text{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 24px;
+        letter-spacing: 0.5rem;
+        font-weight: bold;
+    }
+    .rating{
+        color: #FF7E00;
+    }
+    .head__content__desc{
+        margin: 2.5% 175px;
+
+        font-family: 'Montserrat', sans-serif;
+        font-size: 20px;
+        letter-spacing: 0.15rem;
+        font-weight: lighter;
+        line-height: 1.75rem;
+    }
+    .head__content__right{
+        width: 50%;
+        height: 100%;
+
+        display: flex;
+        justify-content: end;
+        flex-direction: column;
+    }
+    .panel{
+        width: 100%;
+        height: 40%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .dots{
+        width: 200px;
+        height: 50%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 1rem;
+    }
+    .dots > *{
+        cursor: pointer;
+        transition: all 0.2s ease-in;
+    }
+    .dot{
+        width: 15px;
+        height: 15px;
+        background-color: white;
+        border-radius: 50%;
+    }
+    .dot:hover{
+        transform: scale(1.25);
+    }
+    .dot__active{
+        width: 35px;
+        height: 35px;
+        background-color: #FF7E00;
+        border-radius: 50%;
+    }
+    .controls{
+        width: 200px;
+        height: 50%;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .controls > *{
+        cursor: pointer;
+        transition: all 0.2s ease-in;
+    }
+    .controls > *:hover{
+        transform: scale(1.25);
     }
 </style>
