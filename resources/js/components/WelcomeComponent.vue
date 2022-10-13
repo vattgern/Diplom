@@ -60,10 +60,9 @@
         },
         mounted() {
             this.show = true;
-
-            // setTimeout(()=>{
-            //     window.location.href += 'main';
-            // },5000);
+            setTimeout(()=>{
+                window.location.href += 'main';
+            },5000);
         }
     }
 </script>
