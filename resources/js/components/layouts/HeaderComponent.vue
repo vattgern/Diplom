@@ -16,7 +16,7 @@
             </label>
         </div>
         <div class="head__login">
-            <a href="">Вход</a>
+            <router-link :to="{ name: 'registration' }">Вход</router-link>
         </div>
     </div>
 </template>
