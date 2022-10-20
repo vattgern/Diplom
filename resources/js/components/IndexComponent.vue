@@ -8,11 +8,17 @@
 <script>
 import HeaderComponent from "../components/layouts/HeaderComponent.vue";
 import SliderFilmsComponent from "./layouts/SliderFilmsComponent.vue";
+
 export default {
     name: "IndexComponent",
+    data(){
+        return{
+
+        }
+    },
     components:{
         HeaderComponent,
-        SliderFilmsComponent
+        SliderFilmsComponent,
     }
 }
 </script>
@@ -24,5 +30,4 @@ export default {
         background: #1a202c;
         position: relative;
     }
-
 </style>

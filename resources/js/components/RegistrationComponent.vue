@@ -43,6 +43,7 @@ export default {
     methods:{
         formData(){
             console.log(this.formInput);
+
         }
     }
 }

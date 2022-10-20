@@ -233,7 +233,7 @@ export default {
         color: #FF7E00;
     }
     .showDesc{
-        color: #FF7E00;
+        color: white;
         letter-spacing: 0.25rem;
         font-size: 18px;
         cursor: pointer;
@@ -241,6 +241,10 @@ export default {
     .More-enter-active,
     .More-leave-active{
         opacity: 0;
+        transition: all 0.2s ease-in;
+    }
+    .More-enter-to{
+        opacity: 1;
         transition: all 0.2s ease-in;
     }
     .descAnim-enter-active,

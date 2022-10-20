@@ -62,7 +62,7 @@
             this.show = true;
             setTimeout(()=>{
                 window.location.href += 'main';
-            },5000);
+            },3500);
         }
     }
 </script>

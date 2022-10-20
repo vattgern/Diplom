@@ -5,7 +5,9 @@
         </div>
         <div class="head__nav">
             <ul>
-                <li><a href="#">Главная</a></li>
+                <li>
+                    <router-link :to="{name: 'index'}">Главная</router-link>
+                </li>
                 <li><a href="#">Каталог</a></li>
             </ul>
         </div>
