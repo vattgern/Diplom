@@ -6,6 +6,6 @@ export default createStore({
         }
     },
     mutations:{
-        }
+
     }
-});
+})
