@@ -1,9 +1,9 @@
 import {createRouter, createWebHistory} from "vue-router";
-import WelcomeComponent from "./components/WelcomeComponent";
-import IndexComponent from "./components/IndexComponent";
-import RegistrationComponent from "./components/RegistrationComponent";
-import LoginComponent from "./components/LoginComponent";
-
+import WelcomeComponent from "./components/WelcomeComponent.vue";
+import IndexComponent from "./components/IndexComponent.vue";
+import RegistrationComponent from "./components/RegistrationComponent.vue";
+import LoginComponent from "./components/LoginComponent.vue";
+import CatalogComponent from "./components/CatalogComponent.vue";
 
 export default createRouter({
     history: createWebHistory(),
@@ -27,6 +27,11 @@ export default createRouter({
             path: '/login',
             name: 'login',
             component: LoginComponent
+        },
+        {
+            path: '/catalog',
+            name: 'catalog',
+            component: CatalogComponent
         }
     ]
 });

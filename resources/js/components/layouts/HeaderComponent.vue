@@ -8,7 +8,9 @@
                 <li>
                     <router-link :to="{name: 'index'}">Главная</router-link>
                 </li>
-                <li><a href="#">Каталог</a></li>
+                <li>
+                    <router-link :to="{name: 'catalog'}">Каталог</router-link>
+                </li>
             </ul>
         </div>
         <div class="head__search">

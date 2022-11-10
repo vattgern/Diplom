@@ -1,5 +1,5 @@
 <template>
-    <main style="width: 100%;height: 100%;">
+    <main>
         <router-view></router-view>
     </main>
 </template>
@@ -16,5 +16,10 @@ export default {
 </script>
 
 <style scoped>
-
+    main{
+        height: 100%;
+        width: 100%;
+        background: #0B0A0F;
+        overflow-x: hidden;
+    }
 </style>

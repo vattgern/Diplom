@@ -43,10 +43,10 @@
                     </div>
                     <div class="controls">
                         <div class="left" v-on:click="sliderLeft">
-                            <img :src="'../img/Left.svg'" alt="">
+                            <img :src="'../img/icons/Left.svg'" alt="">
                         </div>
                         <div class="right" v-on:click="sliderRight">
-                            <img :src="'../img/Right.svg'" alt="">
+                            <img :src="'../img/icons/Right.svg'" alt="">
                         </div>
                     </div>
                 </div>
