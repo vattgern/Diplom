@@ -12,9 +12,15 @@ class AuthController extends Controller
 {
     public function signUp(Request $request): \Illuminate\Http\JsonResponse
     {
+        if(Auth::attempt($request->all())){
+            return response()->json([
+                'msg' => 'Пользователь уже создан',
+                'code' => 200,
+            ]);
+        }
         $user = User::create([
             'name' =>  $request->input('name'),
-            'login' => $request->input('login'),
+            'email' => $request->input('email'),
             'password' => Hash::make($request->input('password')),
             'role' => 'user'
         ]);
