@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\API\AuthController;
+use App\Http\Controllers\API\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -23,3 +24,10 @@ Route::middleware('auth:sanctum')->group(function (){
 // Auth
 Route::post('/signUp',[AuthController::class,'signUp']);
 Route::post('/signIn',[AuthController::class,'signIn']);
+// Users
+Route::controller(UserController::class)->group(function (){
+    Route::get('/users','all');
+    Route::get('/users/{id}','index');
+    Route::put('/users/{id}', 'update');
+    Route::delete('/users/{id}','destroy');
+});
