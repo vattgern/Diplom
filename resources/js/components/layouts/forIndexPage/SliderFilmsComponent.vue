@@ -11,7 +11,7 @@
                         {{ this.films[this.sliderIndex].yearBegin }} - {{ this.films[this.sliderIndex].yearEnd }}
                     </span>
                     |
-                    <span class="rating"> {{ this.films[this.sliderIndex].rating }} </span>
+                    <span class="rating"> {{ this.films[this.sliderIndex].rating }} </span><br>
                     <Transition name="More">
                         <span v-show="!descShow"
                               v-on:click="this.descShow = true"
@@ -348,5 +348,100 @@ export default {
     }
     .controls > *:hover{
         transform: scale(1.25);
+    }
+    .head__content__desc{
+            font-size: 20px;
+            width: 100%;
+            height: 75%;
+            overflow: scroll;
+        }
+    @media screen and (min-width: 1024px) and (max-width: 1365px){
+        .head__content{
+            height: 75vh;
+            bottom: 0;
+        }
+        .head__content__left > *{
+            margin-left: 75px;
+            width: 100%;
+        }
+        .panel{
+            height: 15%;
+            margin-bottom: 5%;
+        }
+    }
+    @media screen and (min-width: 430px) and (max-width: 1023px){
+        .head__content__left > *{
+            margin-left: 75px;
+            width: 100%;
+        }
+        .head__content{
+            height: 75vh;
+            bottom: 0;
+        }
+        .head__content__title h1{
+            font-size: 36px;
+        }
+        .head__content__text{
+            font-size: 20px;
+            margin: 2.5% 75px;
+        }
+        .head__content__desc{
+            font-size: 20px;
+            width: 100%;
+            height: 75%;
+            margin: 0 75px;
+            overflow: scroll;
+        }
+        .head__shadow{
+            background: rgba(0, 0, 0, 0.55);
+        }
+        .panel{
+            height: 25%;
+        }
+    }
+    /* Телефон */
+    @media screen and (max-width:429px) {
+        .head__main *{
+            overflow: hidden;
+        }
+        .head__content{
+            height: 75vh;
+            bottom: 0;
+
+            flex-direction: column;
+        }
+        .head__content__left{
+            width: 100%;
+            height: 75%;
+        }
+        .head__content__right{
+            width: 100%;
+            height: 25%;
+            justify-content: center;
+
+        }
+        .panel{
+            height: 75%;
+        }
+        .head__content__left > *{
+            margin-left: 20px;
+        }
+        .head__content__title h1{
+            font-size: 36px;
+        }
+        .head__content__text{
+            font-size: 20px;
+            margin: 2.5% 20px;
+        }
+        .head__content__desc{
+            font-size: 20px;
+            width: 90%;
+            height: 65%;
+            margin: 0 20px;
+            overflow: scroll;
+        }
+        .head__shadow{
+            background: rgba(0, 0, 0, 0.66);
+        }
     }
 </style>

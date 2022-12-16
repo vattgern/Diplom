@@ -23,13 +23,17 @@
             </label>
         </div>
         <div class="head__login">
-            <router-link :to="{ name: 'registration' }">Вход</router-link>
+            <router-link :to="{ name: 'registration' }" class="headerBtn">Вход</router-link>
         </div>
         <div class="header__menu">
-            <img :src="'./img/icons/burgerMenu.svg'" alt="">
+            <img :src="'./img/icons/burgerMenu.svg'" v-on:click="burgerMenu = true" alt="">
         </div>
     </div>
-    <div class="burgerMenu">
+    <Transition name="burgerMenu">
+        <div class="burgerMenu" v-show="burgerMenu">
+        <div class="burgerMenuExit" v-on:click="burgerMenu = false">
+            <img :src="'./img/icons/Close.svg'" alt="">
+        </div>
         <ul>
             <li>Главная</li>
             <li>Каталог</li>
@@ -38,11 +42,17 @@
             <li>Поиск</li>
         </ul>
     </div>
+    </Transition>
 </template>
 
 <script>
 export default {
-    name: "HeaderComponent"
+    name: "HeaderComponent",
+    data(){
+        return {
+            burgerMenu: false,
+        }
+    }
 }
 </script>
 
@@ -150,31 +160,41 @@ export default {
         letter-spacing: 0.15rem;
     }
 
-    @media screen and (max-width: 1439px) and (min-width: 1100px){
+
+    .burgerMenu-enter-active,
+    .burgerMenu-leave-active{
+        transition: all 0.4s ease;
+    }
+    .burgerMenu-enter-from,
+    .burgerMenu-leave-to{
+        transform: translateX(100%);
+    }
+    /* Планшеты и ноутбуки */
+    @media screen and (max-width: 1439px) and (min-width: 1024px){
+        .header__head{
+            margin: 0 75px;
+        }
         .head__nav ul{
             gap: 4rem;
         }
-        .header__login a{
-            width: 75%;
-            height: 50%;
+        .headerBtn{
+            padding: 0 45px;
         }
     }
-    @media screen and (max-width: 1099px) and (min-width: 780px){
+    @media screen and (max-width: 1023px) and (min-width: 825px){
         .header__head{
-            margin: 0 100px;
+            margin: 0 75px;
         }
         .head__nav ul{
             gap: 2rem;
         }
-        .header__login a{
-            width: 100%;
-            height: 50%;
+        .headerBtn{
+            padding: 0 45px;
         }
     }
-    @media screen and (max-width: 779px){
+    @media screen and (max-width: 824px) and (min-width: 430px){
         .header__head{
             justify-content: space-between;
-            border: 2px red solid;
             margin: 0 75px;
         }
         .head__logo {
@@ -190,13 +210,11 @@ export default {
             width: 100%;
             height: 100%;
             object-fit: contain;
+
+            cursor: pointer;
         }
-        .head__nav{
-            display: none;
-        }
-        .head__search{
-            display: none;
-        }
+        .head__search,
+        .head__nav,
         .head__login{
             display: none;
         }
@@ -224,10 +242,81 @@ export default {
             line-height: 29px;
             letter-spacing: 0.065em;
 
-            margin-top: 2.5%;
+            margin-top: 10%;
         }
         .burgerMenu li{
-            margin: 15% 0;
+            margin: 20% 0;
+        }
+        .burgerMenuExit{
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 2.5%;
+            cursor: pointer;
+        }
+    }
+    /* Телефоны */
+    @media screen and (max-width: 429px){
+        .header__head{
+            justify-content: space-between;
+            margin: 0 20px;
+        }
+        .head__logo {
+            width: 35%;
+            height: 100%;
+        }
+        .header__menu{
+            display: block;
+            width: 50px;
+            height: 50px;
+        }
+        .header__menu img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+
+            cursor: pointer;
+        }
+        .head__nav,
+        .head__search,
+        .head__login{
+            display: none;
+        }
+        .burgerMenu{
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: 8;
+            background: #0B0A0F;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        .burgerMenu ul{
+            list-style: none;
+            text-align: center;
+
+            font-family: 'Montserrat',sans-serif;
+            font-style: normal;
+            font-weight: 200;
+            font-size: 24px;
+            line-height: 29px;
+            letter-spacing: 0.065em;
+
+            margin-top: 10%;
+        }
+        .burgerMenu li{
+            margin: 20% 0;
+        }
+        .burgerMenuExit{
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 2.5%;
+            cursor: pointer;
         }
     }
 </style>

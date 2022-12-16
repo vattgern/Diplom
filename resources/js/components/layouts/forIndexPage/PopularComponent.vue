@@ -173,4 +173,29 @@ export default {
         transition: opacity 0.4s ease-in;
         opacity: 0;
     }
+    @media screen and (max-width:429px) {
+        .popular{
+            height: 100vh;
+            border: 2px red solid;
+        }
+        .popular-header{
+            height: 10%;
+            display: flex;
+            align-items: flex-end;
+        }
+        .popular-header h2{
+            font-size: 32px;
+            letter-spacing: 5px;
+            margin-left: 20px;
+        }
+        .popular-body{
+            margin: 0 9%;
+            width: 82%;
+            height: 90%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
 </style>
