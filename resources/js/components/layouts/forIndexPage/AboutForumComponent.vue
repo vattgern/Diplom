@@ -99,4 +99,94 @@ export default {
         background: white;
         color: #FF7E00;
     }
+    @media screen and (min-width:1024px) and (max-width: 1365px){
+        .forum-header h2{
+            font-size: 36px;
+            letter-spacing: 0.5rem;
+            margin-left: 75px;
+        }
+        .forum-btn{
+            text-decoration: none;
+            color: white;
+
+            font-family: "Oswald", sans-serif;
+            font-size: 24px;
+            letter-spacing: 2px;
+            font-weight: bold;
+            padding: 1% 2.5%;
+            background: #FF7E00;
+            border-radius: 10px;
+
+            transition: all 0.4s ease-in-out;
+        }
+    }
+    @media screen and (min-width: 430px) and (max-width: 1023px){
+        .forum{
+            margin: 15% 0;
+        }
+        .forum-header h2{
+            font-size: 36px;
+            letter-spacing: 0.5rem;
+            margin-left: 75px;
+        }
+        .forum-btn{
+            text-decoration: none;
+            color: white;
+
+            font-family: "Oswald", sans-serif;
+            font-size: 24px;
+            letter-spacing: 2px;
+            font-weight: bold;
+            padding: 1% 2.5%;
+            background: #FF7E00;
+            border-radius: 10px;
+
+            transition: all 0.4s ease-in-out;
+        }
+    }
+    @media screen and (max-width:429px){
+        .forum{
+            margin: 75px 0;
+            height: 55vh;
+            border: 2px red solid;
+        }
+        .forum-header{
+            width: 100%;
+        }
+        .forum-header h2{
+            font-size: 32px;
+            letter-spacing: 0.5rem;
+            margin-left: 20px;
+        }
+        .forum-img{
+            width: 50%;
+            height: 50%;
+        }
+        #first{
+            top: 15%;
+            left: 20%;
+            background: red;
+            z-index: 4;
+        }
+        #second{
+            top: 20%;
+            left: 30%;
+            background: green;
+            z-index: 3;
+        }
+        .forum-btn{
+            text-decoration: none;
+            color: white;
+
+            font-family: "Oswald", sans-serif;
+            font-size: 20px;
+            letter-spacing: 2px;
+            font-weight: bold;
+            padding: 2% 5%;
+            background: #FF7E00;
+            border-radius: 10px;
+
+            transition: all 0.4s ease-in-out;
+        }
+    }
 </style>

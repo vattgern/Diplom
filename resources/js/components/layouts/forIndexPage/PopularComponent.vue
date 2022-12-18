@@ -173,10 +173,90 @@ export default {
         transition: opacity 0.4s ease-in;
         opacity: 0;
     }
+    @media screen and (min-width: 1024px) and (max-width: 1365px){
+        .popular{
+            height: 75vh;
+        }
+        .popular-header h2{
+            margin-left: 75px;
+            font-size: 36px;
+            letter-spacing: 0.5rem;
+        }
+        .popular-body{
+            margin: 0 7.5%;
+            width: 85%;
+            height: 85%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .popular-card{
+            width: 20%;
+            height: 70%;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            margin: 0 1%;
+        }
+        .popular-card-title p{
+            font-size: 18px;
+        }
+        .year,
+        .rating-count{
+            font-size: 16px;
+        }
+    }
+    @media screen and (min-width: 430px) and (max-width:1023px){
+        .popular{
+            height: 75vh;
+        }
+        .popular-header{
+            height: 15%;
+        }
+        .popular-header h2{
+            margin-left: 75px;
+            font-size: 36px;
+            letter-spacing: 0.5rem;
+        }
+        .popular-body{
+            margin: 0 10%;
+            width: 80%;
+            height: 85%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .popular-card{
+            width: 20%;
+            height: 70%;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            margin: 0 .5%;
+        }
+        .popular-card-img{
+            width: 100%;
+            height: 65%;
+        }
+        .popular-card-title{
+            height: 20%;
+        }
+        .popular-card-title p{
+            font-size: 18px;
+        }
+        .popular-card-info{
+            height: 15%;
+        }
+        .year,
+        .rating-count{
+            font-size: 16px;
+        }
+    }
     @media screen and (max-width:429px) {
         .popular{
-            height: 100vh;
-            border: 2px red solid;
+            height: 100%;
         }
         .popular-header{
             height: 10%;
@@ -189,13 +269,29 @@ export default {
             margin-left: 20px;
         }
         .popular-body{
-            margin: 0 9%;
-            width: 82%;
+            width: 90%;
             height: 90%;
+            margin: 0 5%;
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .popular-card{
+            width: 45%;
+            height: 40%;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            margin: 2.5% 0;
+        }
+        .popular-card-title p{
+            font-size: 18px;
+        }
+        .year,
+        .rating-count{
+            font-size: 18px;
         }
     }
 </style>

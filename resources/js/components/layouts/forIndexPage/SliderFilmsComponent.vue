@@ -14,8 +14,8 @@
                     <span class="rating"> {{ this.films[this.sliderIndex].rating }} </span><br>
                     <Transition name="More">
                         <span v-show="!descShow"
-                              v-on:click="this.descShow = true"
-                              class="showDesc"> Подробнее >
+                            v-on:click="this.descShow = true"
+                            class="showDesc"> Подробнее >
                         </span>
                     </Transition>
                 </div>
@@ -25,8 +25,8 @@
                     </Transition>
                     <Transition name="More">
                         <div v-show="descShow"
-                             v-on:click="this.descShow = false"
-                             class="desc__btn">
+                            v-on:click="this.descShow = false"
+                            class="desc__btn">
                             <p>Скрыть</p>
                         </div>
                     </Transition>
@@ -216,6 +216,7 @@ export default {
     }
     .head__content__left > *{
         margin-left: 175px;
+        width: 82.5vw;
     }
     .head__content__title h1{
         font-family: 'Oswald', sans-serif;
@@ -354,7 +355,8 @@ export default {
             width: 100%;
             height: 75%;
             overflow: scroll;
-        }
+    }
+    /* Ноутбук */
     @media screen and (min-width: 1024px) and (max-width: 1365px){
         .head__content{
             height: 75vh;
@@ -364,11 +366,25 @@ export default {
             margin-left: 75px;
             width: 100%;
         }
+        .head__content__title{
+            width: 82.5vw;  
+        }
+        .head__content__title h1{
+            font-size: 48px;
+        }
+        .head__content__text{
+            font-size: 20px;
+        }
+        .head__content__desc{
+            width: 82.5vw;
+            font-size: 16px;
+        }
         .panel{
-            height: 15%;
+            height: 20%;
             margin-bottom: 5%;
         }
     }
+    /* Планшет */
     @media screen and (min-width: 430px) and (max-width: 1023px){
         .head__content__left > *{
             margin-left: 75px;
@@ -386,8 +402,8 @@ export default {
             margin: 2.5% 75px;
         }
         .head__content__desc{
-            font-size: 20px;
-            width: 100%;
+            font-size: 16px;
+            width: 100vh;
             height: 75%;
             margin: 0 75px;
             overflow: scroll;
@@ -426,22 +442,25 @@ export default {
         .head__content__left > *{
             margin-left: 20px;
         }
+        .head__content__title{
+            width: 100%;
+        }
         .head__content__title h1{
-            font-size: 36px;
+            font-size: 32px;
         }
         .head__content__text{
-            font-size: 20px;
+            font-size: 16px;
             margin: 2.5% 20px;
         }
         .head__content__desc{
-            font-size: 20px;
+            font-size: 16px;
             width: 90%;
             height: 65%;
             margin: 0 20px;
             overflow: scroll;
         }
         .head__shadow{
-            background: rgba(0, 0, 0, 0.66);
+            background: rgba(0, 0, 0, 0.6);
         }
     }
 </style>

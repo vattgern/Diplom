@@ -193,4 +193,28 @@ export default {
         font-weight: 700;
         font-size: 16px;
     }
+    @media screen and (max-width:429px){
+        .contactForm{
+            width: 100%;
+            height: 200vh;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            background: linear-gradient(67.31deg, #FF7F00 -50%, #0B0A0F 50%);
+        }
+        .contacts{
+            height: 100vh;
+            width: 100%;
+            margin-left: 20px;
+        }
+        .contacts-header{
+            width: 100%;
+            margin: 2.5% 0;
+            font-family: 'Oswald', sans-serif;
+            font-weight: bold;
+            font-size: 36px;
+            letter-spacing: 10px;
+            color: white;
+        }
+    }
 </style>

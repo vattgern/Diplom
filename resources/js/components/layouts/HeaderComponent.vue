@@ -172,7 +172,7 @@ export default {
     /* Планшеты и ноутбуки */
     @media screen and (max-width: 1439px) and (min-width: 1024px){
         .header__head{
-            margin: 0 75px;
+            margin: 0 50px;
         }
         .head__nav ul{
             gap: 4rem;

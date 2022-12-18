@@ -87,7 +87,7 @@ export default {
     .genres-list li{
         padding: .5% 2%;
         border-radius: 25px;
-
+        margin: 0.5%;
         font-family: "Oswald", sans-serif;
         font-size: 24px;
         font-weight: bold;
@@ -125,5 +125,167 @@ export default {
     .genres-btn:hover{
         background: white;
         color: #FF7E00;
+    }
+    @media screen and (min-width: 1024px) and (max-width: 1365px){
+        .genres{
+            margin-top: 5%;
+        }
+        .genres-header h2{
+            font-size: 36px;
+            letter-spacing: 0.25rem;
+            margin-left: 75px;
+        }
+        .genres-body{
+            width: 90%;
+            height: 70%;
+            margin: 7.5% 75px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .genres-list{
+            width: 100%;
+            list-style: none;
+            color: white;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        }
+        .genres-list li{
+            padding: 1% 2%;
+            margin: 1% 0.5%;
+            border-radius: 15px;
+
+            font-family: "Oswald", sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        .genres-btn{
+            text-decoration: none;
+            color: white;
+
+            font-family: "Oswald", sans-serif;
+            font-size: 20px;
+            letter-spacing: 2px;
+            font-weight: bold;
+            padding: 1% 2%;
+            background: #FF7E00;
+            border-radius: 10px;
+
+            transition: all 0.4s ease-in-out;
+        }
+    }
+    @media screen and (min-width: 430px) and (max-width:1023px){
+        .genres-header h2{
+            font-size: 36px;
+            letter-spacing: 0.25rem;
+            margin-left: 75px;
+        }
+        .genres-body{
+            width: 90%;
+            height: 70%;
+            margin: 7.5% 75px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .genres-list{
+            width: 100%;
+            list-style: none;
+            color: white;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        }
+        .genres-list li{
+            padding: 1% 2%;
+            margin: 1% 0.5%;
+            border-radius: 15px;
+
+            font-family: "Oswald", sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        .genres-btn{
+            text-decoration: none;
+            color: white;
+
+            font-family: "Oswald", sans-serif;
+            font-size: 20px;
+            letter-spacing: 2px;
+            font-weight: bold;
+            padding: 1% 2%;
+            background: #FF7E00;
+            border-radius: 10px;
+
+            transition: all 0.4s ease-in-out;
+        }
+    }
+    @media screen and (max-width: 429px){
+        .genres{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .genres-header h2{
+            font-size: 32px;
+            letter-spacing: 0.25rem;
+            margin-left: 20px;
+        }
+        .genres-body{
+            width: 90%;
+            height: 70%;
+            margin: 7.5% 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .genres-list{
+            width: 100%;
+            list-style: none;
+            color: white;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .genres-list:nth-child(2){
+            display: none;
+        }
+        .genres-list:nth-child(3){
+            display: none;
+        }
+        .genres-list li{
+            padding: 1% 2%;
+            margin: 1% 0.5%;
+            border-radius: 10px;
+
+            font-family: "Oswald", sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        .genres-btn{
+            text-decoration: none;
+            color: white;
+
+            font-family: "Oswald", sans-serif;
+            font-size: 20px;
+            letter-spacing: 2px;
+            font-weight: bold;
+            padding: 1% 2%;
+            background: #FF7E00;
+            border-radius: 10px;
+
+            transition: all 0.4s ease-in-out;
+        }
     }
 </style>
