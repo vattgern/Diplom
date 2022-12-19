@@ -281,6 +281,8 @@ export default {
         letter-spacing: 0.15rem;
         font-weight: lighter;
         line-height: 1.75rem;
+
+        overflow: hidden;
     }
     .desc__btn{
         margin: 2.5% 0;
@@ -354,7 +356,7 @@ export default {
             font-size: 20px;
             width: 100%;
             height: 75%;
-            overflow: scroll;
+            overflow: auto;
     }
     /* Ноутбук */
     @media screen and (min-width: 1024px) and (max-width: 1365px){
@@ -403,7 +405,7 @@ export default {
         }
         .head__content__desc{
             font-size: 16px;
-            width: 100vh;
+            width: 75vh;
             height: 75%;
             margin: 0 75px;
             overflow: scroll;

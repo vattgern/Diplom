@@ -148,7 +148,6 @@ export default {
         .forum{
             margin: 75px 0;
             height: 55vh;
-            border: 2px red solid;
         }
         .forum-header{
             width: 100%;

@@ -33,7 +33,7 @@ export default {
         margin-top: 5%;
         margin-left: 175px;
         margin-right: 175px;
-        width: 82%;
+        width: 80%;
         height: 30vh;
         color: white;
         display: flex;
@@ -84,5 +84,54 @@ export default {
     .something li:last-child{
         margin-top: 2%;
         margin-bottom: .5%;
+    }
+    @media screen and (min-width: 1024px) and (max-width: 1365px){
+        footer{
+            margin-top: 5%;
+            margin-left: 75px;
+            margin-right: 75px;
+            width: 85%;
+            height: 30vh;
+        }
+    }
+    @media screen and (min-width: 430px) and (max-width: 1023px) {
+        footer{
+            margin-top: 5%;
+            margin-left: 75px;
+            margin-right: 75px;
+            width: 80%;
+            height: 60vh;
+        }
+        .footer-up ul{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+        footer ul li{
+            cursor: pointer;
+            margin: 2.5% 0;
+        }
+    }
+    @media screen and (max-width: 429px){
+        footer{
+            margin-top: 5%;
+            margin-left: 20px;
+            margin-right: 20px;
+            width: 90%;
+            height: 60vh;
+        }
+        .footer-up ul{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+        footer ul li{
+            cursor: pointer;
+            margin: 2.5% 0;
+        }
     }
 </style>

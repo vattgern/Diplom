@@ -94,7 +94,7 @@ export default {
     }
     .contacts-map{
         width: 100%;
-        height: 57%;
+        height: 45%;
     }
     .contacts-map iframe{
         width: 100%;
@@ -185,6 +185,7 @@ export default {
 
         cursor: pointer;
         outline: none;
+        border: none;
         background: #FF7E00;
         color: white;
         border-radius: 5px;
@@ -193,7 +194,36 @@ export default {
         font-weight: 700;
         font-size: 16px;
     }
-    @media screen and (max-width:429px){
+    @media screen and (min-width: 1024px) and (max-width: 1365px){
+        .contacts{
+            height: 100%;
+            width: 35%;
+            margin-left: 50px;
+        }
+        .contacts-header{
+            font-size: 32px;
+        }
+        .contacts-info p{
+            font-size: 20px;
+        }
+        .contacts-info ul{
+            margin-left: 5%;
+            font-size: 16px;
+        }
+        .contacts-map{
+            height: 40%;
+        }
+        .form{
+            margin-right: 50px;
+        }
+        .form h2{
+            font-size: 32px;
+        }
+        .form form label input{
+            width: 60%;
+        }
+    }
+    @media screen and (max-width: 1023px){
         .contactForm{
             width: 100%;
             height: 200vh;
@@ -210,11 +240,66 @@ export default {
         .contacts-header{
             width: 100%;
             margin: 2.5% 0;
-            font-family: 'Oswald', sans-serif;
-            font-weight: bold;
-            font-size: 36px;
-            letter-spacing: 10px;
-            color: white;
+            font-size: 32px;
+            letter-spacing: .5rem;
+        }
+        .contacts-info p{
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            letter-spacing: 1px;
+            margin: 5% 2%;
+        }
+        .contacts-info ul li{
+            margin: 3.5% 7.5%;
+        }
+        .contacts-map{
+            width: 90%;
+            height: 45%;
+        }
+        .form{
+            margin: 0 20px;
+            width: 90%;
+            height: 100vh;
+            border: none;
+        }
+        .form h2{
+            font-size: 32px;
+        }
+        .form form label input {
+            width: 97.5%;
+            border-radius: 5px;
+        }
+        .form form label textarea{
+            width: 97.5%;
+            border-radius: 5px;
+        }
+        .form form button{
+            padding: 2.5% 5%;
+        }
+    }
+    @media screen and (max-width:1023px) and (min-width:430px){
+        .contacts{
+            margin: 0 75px;
+        }
+        .contacts-header{
+            font-size: 32px;
+        }
+        .contacts-info p{
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            letter-spacing: 1px;
+            margin: 5% 0;
+        }
+        .contacts-info ul li{
+            margin: 10% 5%;
+        }
+        .contacts-map{
+            width: 80%;
+        }
+        .form{
+            margin: 0 75px;
+            width: 80%;
+            padding-left: 0;
         }
     }
 </style>
