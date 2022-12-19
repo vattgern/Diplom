@@ -3,7 +3,7 @@
         <ul class="filter-items">
             <FilterItemComponent v-for="filter in filters"
                                  :title="filter.title"
-                                  :filter-options="filter.options"></FilterItemComponent>
+                                  :filterOptions="filter.options"></FilterItemComponent>
 
         </ul>
         <div class="filter-btn">
@@ -41,7 +41,7 @@ export default {
         height: 100%;
         width: 20%;
         background: white;
-        margin-left: 12.5%;
+        margin-left: 10%;
         border-radius: 15px;
     }
 </style>
