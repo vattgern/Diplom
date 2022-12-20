@@ -3,7 +3,7 @@ import WelcomeComponent from "./components/WelcomeComponent.vue";
 import IndexComponent from "./components/IndexComponent.vue";
 import RegistrationComponent from "./components/RegistrationComponent.vue";
 import LoginComponent from "./components/LoginComponent.vue";
-import CatalogComponent from "./components/CatalogComponent.vue";
+import CatalogComponent from "./components/layouts/Calalog/CatalogComponent.vue";
 
 export default createRouter({
     history: createWebHistory(),

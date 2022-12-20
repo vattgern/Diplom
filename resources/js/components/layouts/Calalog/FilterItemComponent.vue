@@ -1,21 +1,20 @@
 <template>
     <li class="filter-item">
-        <div class="filter-item-header">
+        <div class="filter-item-header" @click="openFilters(this)">
             <h4>{{ this.title }}</h4>
-            <img @click="openFilters(this)" :style="show ? 'transform: rotate(0)' : 'transform: rotate(90deg)'" :src="'../img/icons/triangle-black.svg'" alt="">
+            <img :style="show ? 'transform: rotate(0)' : 'transform: rotate(90deg)'" 
+                :src="'../img/icons/triangle-black.svg'" alt="">
         </div>
-        <Transition name="arriveFilter">
-            <div v-show="show" class="filter-item-options">
-                <ul>
-                    <li v-for="item in filterOptions">
-                        <label>
-                            <input type="checkbox" name="" id="">
-                            {{ item }}
-                        </label>
-                    </li>
-                </ul>
-            </div>
-        </Transition>
+        <div v-show="show" class="filter-item-options">
+            <ul>
+                <li v-for="item in filterOptions">
+                    <label>
+                        <input type="checkbox" name="" id="" :value="item" v-model="this.$store.state.selectedFilters">
+                        <p>{{ item }}</p>
+                    </label>
+                </li>
+            </ul>
+        </div>
     </li>
 </template>
 
@@ -28,7 +27,7 @@ export default {
     },
     data(){
         return{
-            show: false
+            show: false,
         }
     },
     methods: {
@@ -52,6 +51,7 @@ export default {
         justify-content: space-between;
         align-items: center;
         margin: 0 5%;
+        cursor: pointer;
     }
     .filter-item-header h4{
         font-family: "Oswald", sans-serif;
@@ -64,9 +64,8 @@ export default {
         transition: all 0.4s ease;
     }
     .filter-item-options{
-        height: 150px;
-        border: 2px red solid;
-        overflow: auto;
+        height: 100%;
+        border-bottom: 2px gray solid;
     }
     .filter-item-options ul{
         width: 100%;
@@ -79,31 +78,45 @@ export default {
         flex-direction: row;
         align-items: center;
         margin: 2.5% 0;
+        position: relative;
     }
     .filter-item-options ul li input[type='checkbox']{
         appearance: none;
-        height: 24px;
-        width: 24px;
-        background: #fff;
-        border: 2px solid #b0b0b0;
-        border-radius: 5px;
-        margin: 0 8px 0 0;
+    }
+    .filter-item-options ul li label{
+        width: 100%;
+        padding: 2.5% 0;
         display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        outline-offset: 5px;
-        outline-color: #b0b0b0;
+        flex-direction: row;
+    }
+    .filter-item-options ul li label p {
+        margin-left: 10%;
     }
     .filter-item-options ul li input[type='checkbox']::after{
-        content: '';
-        display: block;
-        transform: scale(0);
-        transition: 120ms transform ease-in-out;
+        content: "";
+        cursor: pointer;
+        position: absolute;
+        left: 1%;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 24px;
+        height: 24px;
+        border: 2px gray solid;
+        border-radius: 5px;
+        transition: all 0.4s ease-in-out;
+    }
+    .filter-item-options ul li input[type='checkbox']:hover::after{
+        border: 2px #FF7E00 solid;
     }
     .filter-item-options ul li input[type='checkbox']:checked::after{
-        transform: scale(1);
-        background: #FF7F00;
+        content: '\2713';
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        color: white;
+        background-color: #FF7E00;
+        
     }
     .arriveFilter-enter-active,
     .arriveFilter-leave-active{
