@@ -3,6 +3,8 @@
         <FastFilter 
             v-for="filter in fastFilters"
             :name="filter"></FastFilter>
+    </div>
+    <div class="view-mode">
         <img :src="'./img/icons/cards.svg'" alt="">
         <img :src="'./img/icons/lists.svg'" alt="">
     </div>
@@ -31,12 +33,19 @@
 <style scoped>
     .fast-filters{
         width: 80%;
-        border: 2px red solid;
         height: 7.5vh;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: flex-start;
         gap: 2rem;
+    }
+    .view-mode{
+        width: 10%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .view-mode img{
+        cursor: pointer;
     }
 </style>

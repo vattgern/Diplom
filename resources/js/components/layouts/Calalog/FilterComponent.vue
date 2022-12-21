@@ -54,7 +54,7 @@ export default {
 
 <style scoped>
     .filter-block{
-        height: 100%;
+        height: 100vh;
         width: 20%;
         background: white;
         margin-left: 10%;
