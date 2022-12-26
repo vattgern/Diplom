@@ -113,4 +113,28 @@ export default {
     font-family: 'Oswald',sans-serif;
     font-size: 3rem;
 }
+@media screen and (max-width: 1024px) and (min-width:769px){
+    .login-form{
+        width: 75%;
+    }
+    .login-form button{
+        width: 75%;
+    }
+}
+@media screen and (max-width:768px){
+    .login-view{
+        display: none;
+    }
+    .login{
+        width: 100%;
+    }
+}
+@media screen and (max-width:429px){
+    .login-form{
+        width: 90%;
+    }
+    .login-form button{
+        width: 75%;
+    }
+}
 </style>
