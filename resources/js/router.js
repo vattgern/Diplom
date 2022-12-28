@@ -4,6 +4,7 @@ import IndexComponent from "./components/IndexComponent.vue";
 import RegistrationComponent from "./components/RegistrationComponent.vue";
 import LoginComponent from "./components/LoginComponent.vue";
 import CatalogComponent from "./components/layouts/Calalog/CatalogComponent.vue";
+import AdminComponent from './components/admin/AdminComponent.vue';
 
 export default createRouter({
     history: createWebHistory(),
@@ -32,6 +33,11 @@ export default createRouter({
             path: '/catalog',
             name: 'catalog',
             component: CatalogComponent
+        },
+        {
+            path: '/adminpanel',
+            name: 'admin',
+            component: AdminComponent
         }
     ]
 });

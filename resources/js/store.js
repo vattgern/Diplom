@@ -3,7 +3,8 @@ export default createStore({
     state(){
         return {
             para: false,
-            selectedFilters: []
+            selectedFilters: [],
+            adminRouter: ''
         }
     },
     mutations:{
