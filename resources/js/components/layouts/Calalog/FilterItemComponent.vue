@@ -2,14 +2,15 @@
     <li class="filter-item">
         <div class="filter-item-header" @click="openFilters(this)">
             <h4>{{ this.title }}</h4>
-            <img :style="show ? 'transform: rotate(0)' : 'transform: rotate(90deg)'" 
+            <img :style="show ? 'transform: rotate(0)' : 'transform: rotate(90deg)'"
                 :src="'../img/icons/triangle-black.svg'" alt="">
         </div>
         <div v-show="show" class="filter-item-options">
             <ul>
                 <li v-for="item in filterOptions">
                     <label>
-                        <input type="checkbox" name="" id="" :value="item" v-model="this.$store.state.selectedFilters">
+                        <input type="checkbox" name="" id=""
+                            :value="item" v-model="this.$store.state.selectedFilters">
                         <p>{{ item }}</p>
                     </label>
                 </li>
@@ -32,7 +33,7 @@ export default {
     },
     methods: {
         openFilters(el){
-            this.show = this.show == true ? false : true;
+            this.show = this.show !== true;
         },
     },
 }
@@ -44,7 +45,6 @@ export default {
         height: 100%;
     }
     .filter-item-header{
-        height: 100%;
         height: 50px;
         display: flex;
         flex-direction: row;
@@ -57,7 +57,7 @@ export default {
         font-family: "Oswald", sans-serif;
         font-weight: bold;
         color: black;
-        font-size: 24px;
+        font-size: 2vw;
     }
     .filter-item-header img{
         transform: rotate(90deg);
@@ -90,17 +90,18 @@ export default {
         flex-direction: row;
     }
     .filter-item-options ul li label p {
-        margin-left: 10%;
+        margin-left: 3.25vw;
+        font-size: 1.25vw;
     }
     .filter-item-options ul li input[type='checkbox']::after{
         content: "";
         cursor: pointer;
         position: absolute;
-        left: 1%;
+        left: 5%;
         top: 50%;
         transform: translateY(-50%);
-        width: 24px;
-        height: 24px;
+        width: 1.8vw;
+        height: 1.8vw;
         border: 2px gray solid;
         border-radius: 5px;
         transition: all 0.4s ease-in-out;
@@ -116,15 +117,19 @@ export default {
         font-size: 20px;
         color: white;
         background-color: #FF7E00;
-        
+
     }
-    .arriveFilter-enter-active,
-    .arriveFilter-leave-active{
-        transition: all 0.4s ease-in;
-    }
-    .arriveFilter-enter-from,
-    .arriveFilter-leave-to{
-        transform: translateY(-5vh);
-        opacity: 0;
+    @media screen and (max-width: 429px){
+        .filter-item-header h4{
+            font-size: 6vw;
+        }
+        .filter-item-options ul li label p {
+            margin-left: 12.5vw;
+            font-size: 4vw;
+        }
+        .filter-item-options ul li input[type='checkbox']::after{
+            width: 5vw;
+            height: 5vw;
+        }
     }
 </style>

@@ -34,6 +34,32 @@
                 <li>КОМЕДИЯ</li>
                 <li>БИОГРАФИЯ</li>
             </ul>
+            <ul class="genres-list genres-list-moblie">
+                <li>БОЕВИК</li>
+                <li>ДРАМА</li>
+                <li>ДЕТЕКТИВ</li>
+                <li>ФАНТАСТИКА</li>
+                <li>ФЕНТЕЗИ</li>
+                <li>ВЕСТЕРН</li>
+                <li>КОМЕДИЯ</li>
+                <li>БИОГРАФИЯ</li>
+                <li>КОМЕДИЯ</li>
+                <li>ФАНТАСТИКА</li>
+                <li>ФЕНТЕЗИ</li>
+                <li>БИОГРАФИЯ</li>
+                <li>ДРАМА</li>
+                <li>ДЕТЕКТИВ</li>
+                <li>БОЕВИК</li>
+                <li>ВЕСТЕРН</li>
+                <li>ДРАМА</li>
+                <li>ДЕТЕКТИВ</li>
+                <li>БОЕВИК</li>
+                <li>ВЕСТЕРН</li>
+                <li>КОМЕДИЯ</li>
+                <li>ФАНТАСТИКА</li>
+                <li>ФЕНТЕЗИ</li>
+                <li>БИОГРАФИЯ</li>
+            </ul>
         </div>
         <div class="genres-footer">
             <router-link :to="{ name: '' }" class="genres-btn">БОЛЬШЕ ЖАНРОВ</router-link>
@@ -83,6 +109,9 @@ export default {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
+    }
+    .genres-list-moblie{
+        display: none;
     }
     .genres-list li{
         padding: .5% 2%;
@@ -152,6 +181,7 @@ export default {
             flex-direction: row;
             justify-content: flex-start;
             flex-wrap: wrap;
+            display: none;
         }
         .genres-list li{
             padding: 1% 2%;
@@ -162,6 +192,9 @@ export default {
             font-size: 14px;
             font-weight: bold;
             letter-spacing: 2px;
+        }
+        .genres-list-moblie{
+            display: flex;
         }
         .genres-btn{
             text-decoration: none;
@@ -201,6 +234,7 @@ export default {
             flex-direction: row;
             justify-content: flex-start;
             flex-wrap: wrap;
+            display: none;
         }
         .genres-list li{
             padding: 1% 2%;
@@ -211,6 +245,10 @@ export default {
             font-size: 14px;
             font-weight: bold;
             letter-spacing: 2px;
+        }
+        .genres-list-moblie{
+            display: flex;
+            justify-content:space-evenly;
         }
         .genres-btn{
             text-decoration: none;
@@ -225,6 +263,12 @@ export default {
             border-radius: 10px;
 
             transition: all 0.4s ease-in-out;
+        }
+        .genres-list:nth-child(2){
+            display: none;
+        }
+        .genres-list:nth-child(3){
+            display: none;
         }
     }
     @media screen and (max-width: 429px){
@@ -261,6 +305,9 @@ export default {
             display: none;
         }
         .genres-list:nth-child(3){
+            display: none;
+        }
+        .genres-list-moblie{
             display: none;
         }
         .genres-list li{

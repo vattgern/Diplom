@@ -233,7 +233,7 @@ export default {
             background: linear-gradient(67.31deg, #FF7F00 -50%, #0B0A0F 50%);
         }
         .contacts{
-            height: 100vh;
+            height: 50%;
             width: 100%;
             margin-left: 20px;
         }
@@ -250,16 +250,17 @@ export default {
             margin: 5% 2%;
         }
         .contacts-info ul li{
-            margin: 3.5% 7.5%;
+            margin: .5% 7.5%;
         }
         .contacts-map{
             width: 90%;
-            height: 45%;
+            height: 40%;
         }
         .form{
             margin: 0 20px;
+            margin-top: 5%;
             width: 90%;
-            height: 100vh;
+            height: 40%;
             border: none;
         }
         .form h2{
@@ -291,7 +292,7 @@ export default {
             margin: 5% 0;
         }
         .contacts-info ul li{
-            margin: 10% 5%;
+            margin: 5% 5%;
         }
         .contacts-map{
             width: 80%;

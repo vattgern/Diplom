@@ -3,7 +3,9 @@ export default createStore({
     state(){
         return {
             para: false,
-            selectedFilters: []
+            selectedFilters: [],
+            showMode: 'lists',
+            showFilter: false,
         }
     },
     mutations:{

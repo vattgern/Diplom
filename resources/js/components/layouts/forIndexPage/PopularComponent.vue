@@ -129,7 +129,7 @@ export default {
     }
     .popular-card-title p{
         font-family: "Oswald", sans-serif;
-        font-size: 26px;
+        font-size: 20px;
         font-weight: 400;
         letter-spacing: 2px;
     }
@@ -200,7 +200,7 @@ export default {
             margin: 0 1%;
         }
         .popular-card-title p{
-            font-size: 18px;
+            font-size: 14px;
         }
         .year,
         .rating-count{

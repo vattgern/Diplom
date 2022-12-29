@@ -14,8 +14,8 @@
 
 <style scoped>
     .fast-filter{
-        width: 100px;
-        height: 40px;
+        width: 7.5vw;
+        height: 3vw;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -26,6 +26,15 @@
     .fast-filter p{
         color: white;
         font-family: "Oswald", sans-serif;
-        font-size: 18px;
+        font-size: 1.25vw;
+    }
+    @media screen and (max-width: 429px){
+        .fast-filter{
+            width: 22.5vw;
+            height: 7.5vw;
+        }
+        .fast-filter p{
+            font-size: 4vw;
+        }
     }
 </style>

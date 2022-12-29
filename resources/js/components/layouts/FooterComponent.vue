@@ -4,7 +4,7 @@
             <ul>
                 <li>
                     <figure class="logo">
-                        <img :src="'./img/LogoFull.png'" alt="">
+                        <img :src="'/img/LogoFull.png'" alt="">
                     </figure>
                 </li>
                 <li>Главная</li>
