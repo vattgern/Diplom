@@ -120,4 +120,31 @@ export default {
         font-family: 'Oswald',sans-serif;
         font-size: 3rem;
     }
+    @media screen and (max-width: 1024px) and (min-width:769px){
+        .register-form{
+            width: 75%;
+        }
+        .register-form button{
+            width: 250px;
+        }
+    }
+    @media screen and (max-width:768px){
+        .registration-view{
+            display: none;
+        }
+        .registration{
+            width: 100%;
+        }
+        .register-form button{
+            width: 250px;
+        }
+    }
+    @media screen and (max-width:429px){
+        .register-form{
+            width: 90%;
+        }
+        .register-form button{
+            width: 250px;
+        }
+    }
 </style>

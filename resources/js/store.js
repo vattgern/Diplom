@@ -4,8 +4,9 @@ export default createStore({
         return {
             para: false,
             selectedFilters: [],
-            showMode: 'lists',
+            showMode: 'cards',
             showFilter: false,
+            adminRouter: '',
         }
     },
     mutations:{

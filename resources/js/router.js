@@ -4,7 +4,7 @@ import IndexComponent from "./components/IndexComponent.vue";
 import RegistrationComponent from "./components/RegistrationComponent.vue";
 import LoginComponent from "./components/LoginComponent.vue";
 import CatalogComponent from "./components/layouts/Calalog/CatalogComponent.vue";
-import FilmComponent from './components/FilmComponent.vue';
+import FilmComponent from "./components/FilmComponent.vue";
 
 export default createRouter({
     history: createWebHistory(),
@@ -37,7 +37,7 @@ export default createRouter({
         {
             path: '/film/:id',
             name: 'film',
-            component: FilmComponent,
+            component: FilmComponent
         }
     ]
 });
