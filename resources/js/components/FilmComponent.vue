@@ -1,12 +1,13 @@
 <template>
     <section class="film-poster">
         <HeaderComponent></HeaderComponent>
+        <AboutFilm></AboutFilm>
     </section>
     <FooterComponent></FooterComponent>
 </template>
 <script>
 import HeaderComponent from './layouts/HeaderComponent.vue';
-
+import AboutFilm from "./layouts/Film/AboutFilm.vue";
 import FooterComponent from './layouts/FooterComponent.vue';
 export default {
     name: "FilmComponent",
@@ -18,6 +19,7 @@ export default {
     components: {
         HeaderComponent,
         FooterComponent,
+        AboutFilm
     }
 }
 </script>
