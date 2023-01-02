@@ -4,7 +4,7 @@
             <h2>Популярное</h2>
         </div>
         <div class="popular-body">
-            <div class="popular-card" v-for="card in popular">
+            <router-link :to="{name: 'film', params: { id: 1}}" class="popular-card" v-for="card in popular">
                 <figure class="popular-card-img">
                     <img :src="card.img" alt="">
                 </figure>
@@ -22,7 +22,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </router-link>
         </div>
         <div class="popular-back-hover"></div>
     </section>
@@ -110,6 +110,8 @@ export default {
         display: flex;
         flex-direction: column;
         cursor: pointer;
+        text-decoration: none;
+        color: white;
     }
     .popular-card-img{
         width: 100%;

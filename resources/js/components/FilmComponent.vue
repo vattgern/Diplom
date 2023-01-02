@@ -1,14 +1,21 @@
 <template>
     <section class="film-poster">
         <HeaderComponent></HeaderComponent>
-        <AboutFilm></AboutFilm>
     </section>
+    <AboutFilm></AboutFilm>
+    <FormReview></FormReview>
+    <Review></Review>
+    <Similar></Similar>
     <FooterComponent></FooterComponent>
 </template>
 <script>
 import HeaderComponent from './layouts/HeaderComponent.vue';
 import AboutFilm from "./layouts/Film/AboutFilm.vue";
+import FormReview from './layouts/Film/FormReview.vue';
+import Review from './layouts/Film/Review.vue';
+import Similar from "./layouts/Film/Similar.vue";
 import FooterComponent from './layouts/FooterComponent.vue';
+
 export default {
     name: "FilmComponent",
     data(){
@@ -19,7 +26,10 @@ export default {
     components: {
         HeaderComponent,
         FooterComponent,
-        AboutFilm
+        AboutFilm,
+        FormReview,
+        Review,
+        Similar
     }
 }
 </script>
