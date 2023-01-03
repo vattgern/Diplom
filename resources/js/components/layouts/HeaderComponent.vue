@@ -26,13 +26,13 @@
             <router-link :to="{ name: 'registration' }" class="headerBtn">Вход</router-link>
         </div>
         <div class="header__menu">
-            <img :src="'./img/icons/burgerMenu.svg'" v-on:click="burgerMenu = true" alt="">
+            <img :src="'/img/icons/burgerMenu.svg'" v-on:click="burgerMenu = true" alt="">
         </div>
     </div>
     <Transition name="burgerMenu">
         <div class="burgerMenu" v-show="burgerMenu">
         <div class="burgerMenuExit" v-on:click="burgerMenu = false">
-            <img :src="'./img/icons/Close.svg'" alt="">
+            <img :src="'/img/icons/Close.svg'" alt="">
         </div>
         <ul>
             <li>Главная</li>

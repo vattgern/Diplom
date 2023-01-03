@@ -43,4 +43,15 @@ export default {
         background-position: center center;
         background-attachment: fixed;
     }
+    @media screen and (max-width: 768px) and (min-width: 430px){
+        .film-poster{
+            height: 66vh;
+        }
+    }
+    @media screen and (max-width: 429px){
+        .film-poster{
+            height: 50vh;
+            background-attachment: scroll;
+        }
+    }
 </style>

@@ -104,6 +104,7 @@
     .about-film-title h2{
         font-family: "Oswald", sans-serif;
         font-size: 4vw;
+        letter-spacing: 2px;
         color: white;
     }
     .about-film-body{
@@ -122,7 +123,7 @@
     .about-film-poster > img{
         border-radius: 20px;
         margin: 2vw 0;
-        width: 90%;
+        width: 75%;
     }
     .about-film-poster button{
         width: 100%;
@@ -149,7 +150,7 @@
     }
     .about-film-info hr{
         width: 100%;
-        height: 3px;
+        height: 1.5px;
 
         background: #FF7E00;
         color: #FF7E00;
@@ -256,5 +257,106 @@
         font-size: 1vw;
         margin-top: 1vw;
         letter-spacing: 1px;
+    }
+    @media screen and (max-width: 1024px) and (min-width: 769px){
+        .about-film{
+            bottom: 11vh;
+        }
+        .about-film-title{
+            width: 87.5%;
+        }
+        .about-film-body{
+            width: 87.5%;
+        }
+    }
+    @media screen and (max-width: 768px) and (min-width: 430px){
+        .about-film{
+            bottom: 11vh;
+        }
+        .about-film-poster button{
+            height: 30px;
+            width: 80%;
+            border-radius: 5px;
+        }
+        .about-film-info{
+            margin-left: 0;
+            width: 70%;
+        }
+    }
+    @media screen and (max-width: 429px){
+        .about-film{
+            bottom: 5vh;
+        }
+        .about-film-title{
+            width: 90%;
+            text-align: center;
+        }
+        .about-film-title h2{
+            font-size: 7vw;
+        }
+        .about-film-body{
+            width: 90%;
+            flex-direction: column;
+            align-items: center;
+        }
+        .about-film-poster{
+            width: 100%;
+            height: 15%;
+        }
+        .about-film-poster img{
+            display: none;
+        }
+        .about-film-poster button{
+            font-size: 3.5vw;
+            width: 75%;
+            height: 40px;
+        }
+        .about-film-info{
+            width: 100%;
+            height: auto;
+            margin-left: 0;
+        }
+        .about-film-information{
+            font-size: 4vw;
+            justify-content: center;
+        }
+        .about-film-information > p{
+            padding: 0 1.5vw;
+        }
+        .about-film-information > p:nth-child(3){
+            border-left: 1px #FF7E00 solid;
+            border-right: 1px #FF7E00 solid;
+        }
+        .about-film-members{
+            flex-direction: column;
+            align-items: center;
+        }
+        .details,
+        .actors,.gallery{
+            width: 100%;
+            height: auto;
+        }
+        .details-title,
+        .actors-title,
+        .description-title{
+            font-family: "Oswald", sans-serif;
+            font-size: 5vw;
+            letter-spacing: 2px;
+        }
+        .details-body > ul,
+        .actors-body > ul{
+            list-style: none;
+            font-family: "Montserrat", sans-serif;
+            font-size: 3.5vw;
+        }
+        .details-body ul li{
+            margin: 1.25vw 0;
+        }
+        .description-body p{
+            font-family: "Montserrat", sans-serif;
+            font-size: 3.5vw;
+            margin-top: 1vw;
+            letter-spacing: 1px;
+        }
     }
 </style>

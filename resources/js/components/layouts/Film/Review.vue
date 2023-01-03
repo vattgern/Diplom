@@ -234,4 +234,95 @@ export default {
         letter-spacing: 1px;
         line-height: 1.5vw;
     }
+
+    @media screen and (max-width: 1024px) and (min-width: 769px){
+        .review-list-title{
+            width: 90%;
+            font-size: 3vw;
+        }
+        .review-list-body{
+            width: 90%;
+        }
+        .review-list-total-img p:nth-child(1){
+            font-size: 6vw;
+        }
+        .review-list-total-img p:nth-child(2){
+            font-size: 1.5vw;
+        }
+    }
+    @media screen and (max-width: 768px) and (min-width: 430px){
+        .review-list-title{
+            width: 80%;
+            font-size: 3vw;
+        }
+        .review-list-body{
+            width: 80%;
+        }
+        .review-list-total-img p:nth-child(1){
+            font-size: 6vw;
+        }
+        .review-list-total-img p:nth-child(2){
+            font-size: 1.5vw;
+        }
+        .review-list-user{
+            width: 85%;
+        }
+    }
+    @media screen and (max-width: 750px){
+        .review-list{
+            height: 100%;
+        }
+        .review-list-title{
+            width: 90%;
+            font-size: 4vw;
+        }
+        .review-list-body{
+            width: 80%;
+            flex-direction: column;
+            align-items: center;
+        }
+        .review-list-total-text{
+            width: 75%;
+            color: white;
+        }
+        .review-list-total-text ul li{
+            margin: 3vw 0;
+        }
+        .review-list-total{
+            width: 90%;
+            height: 100%;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .review-list-total-img p:nth-child(1){
+            font-size: 15vw;
+        }
+        .review-list-total-img p:nth-child(2){
+            font-size: 3.75vw;
+        }
+        .review-list-users{
+            width: 100%;
+        }
+        .review-list-user{
+            border: 2px #FF7E00 solid;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin: 2vw 0;
+        }
+        .review-user{
+            font-size: 4vw;
+        }
+        .review-user-body p{
+            width: 90%;
+            margin-left: 2.5%;
+            font-family: "Montserrat", sans-serif;
+            font-size: 3vw;
+            line-height: 2.25vh;
+        }
+    }
 </style>

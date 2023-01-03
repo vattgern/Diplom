@@ -16,7 +16,7 @@
                         <p>{{ card.year }}</p>
                     </div>
                     <div class="rating">
-                        <img :src="'./img/icons/star.svg'" alt="">
+                        <img :src="'/img/icons/star.svg'" alt="">
                         <div class="rating-count">
                             <p>{{ card.rating }}</p>
                         </div>
@@ -76,6 +76,9 @@ export default {
     height: 90vh;
     color: white;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .popular-header,
 .popular-body{
@@ -83,7 +86,7 @@ export default {
     z-index: 4;
 }
 .popular-header{
-    width: 100%;
+    width: 80%;
     height: 25%;
     display: flex;
     align-items: flex-end;
@@ -92,12 +95,9 @@ export default {
     font-family: 'Oswald', sans-serif;
     font-weight: bold;
     font-size: 48px;
-    letter-spacing: 10px;
-    margin-left: 175px;
 }
 .popular-body{
-    margin: 0 9%;
-    width: 82%;
+    width: 80%;
     height: 75%;
     display: flex;
     flex-direction: row;

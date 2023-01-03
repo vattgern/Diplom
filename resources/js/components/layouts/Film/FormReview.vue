@@ -68,6 +68,7 @@ export default {
         width: 80%;
         font-family: "Oswald", sans-serif;
         font-size: 2vw;
+        letter-spacing: 2px;
     }
     .review-body{
         width: 80%;
@@ -154,5 +155,93 @@ export default {
     }
     .review-form textarea:focus{
         background: rgba(255, 126, 0, 0.25);
+    }
+    @media screen and (max-width: 1024px) and (min-width: 430px){
+        .review{
+            width: 100%;
+            height: 60vh;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            color: white;
+        }
+        .review-title{
+            width: 90%;
+            font-size: 3vw;
+        }
+        .review-body{
+            width: 80%;
+        }
+        .review-estimation{
+            width: 30%;
+        }
+        .review-estimation > p{
+            font-size: 3vw;
+        }
+        .review-estimation-btn{
+            font-size: 2vw;
+            width: 17.5vw;
+            height: 6vh;
+        }
+        .review-form p{
+            font-size: 3vw;
+        }
+        .review-form textarea{
+            font-size: 1.75vw;
+            padding: 2.5%;
+        }
+    }
+    @media screen and (max-width: 768px) and (min-width: 430px){
+        .review-estimation-count{
+            height: 125px;
+            width: 125px;
+        }
+        .review-title{
+            width: 80%;
+            margin-bottom: 2vw;
+            font-size: 3vw;
+        }
+        .review-body{
+            width: 80%;
+        }
+    }
+    @media screen and (max-width: 429px){
+        .review-title{
+            width: 90%;
+            font-size: 4vw;
+        }
+        .review-body{
+            width: 90%;
+            flex-direction: column;
+        }
+        .review-estimation{
+            width: 100%;
+        }
+        .review-estimation > p{
+            display: none;
+        }
+        .review-estimation-count{
+            width: 150px;
+            height: 150px;
+            font-size: 17.5vw;
+            justify-content: space-around;
+        }
+        .review-estimation-btn{
+            width: 40vw;
+            margin-top: 5vw;
+            height: 7.5vh;
+            font-size: 4vw;
+            display: none;
+        }
+        .review-form p{
+            display: none;
+        }
+        .review-form textarea{
+            width: 90vw;
+            padding: 2vw;
+            font-size: 3vw;
+        }
     }
 </style>
